@@ -17,10 +17,22 @@ public:
 
 	bool onTouchBegan(cocos2d::Touch* touch, cocos2d::Event* unused_event);
 
+	bool onContactBegin(cocos2d::PhysicsContact& contact);
+
 	// implement the "static create()" method manually
 	CREATE_FUNC(HelloWorld);
 
 private:
-	cocos2d::Sprite* ball;
+
+	cocos2d::PhysicsWorld* world;
+
+	// 地面オブジェクト.
+	cocos2d::Sprite* floor;
+
+	// ボールオブジェクト.
+	std::vector<cocos2d::Sprite*> ballList;
+
+	// スコアラベル.
+	cocos2d::LabelTTF* scoreLabel;
 };
 #endif // __HELLOWORLD_SCENE_H__

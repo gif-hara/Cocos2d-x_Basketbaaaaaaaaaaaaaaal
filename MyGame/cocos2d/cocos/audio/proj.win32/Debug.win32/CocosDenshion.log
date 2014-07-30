@@ -1,19 +1,19 @@
-﻿2014/07/30 20:29:12 にビルドを開始しました。
-     1>ノード 4 上のプロジェクト "C:\cocos2d-x\Project\MyGame\cocos2d\cocos\audio\proj.win32\CocosDenshion.vcxproj" (Rebuild ターゲット)。
+﻿2014/07/31 0:41:49 にビルドを開始しました。
+     1>ノード 4 上のプロジェクト "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\cocos\audio\proj.win32\CocosDenshion.vcxproj" (Rebuild ターゲット)。
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /I..\Include /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\cocos" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\cocos\platform\win32" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\cocos\platform\desktop" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\external\glfw3\include\win32" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _USING_V110_SDK71_ /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt ..\win32\MciPlayer.cpp ..\win32\SimpleAudioEngine.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /I..\Include /I"C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\cocos\2d\..\..\cocos" /I"C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\cocos\2d\..\..\cocos\platform\win32" /I"C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\cocos\2d\..\..\cocos\platform\desktop" /I"C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\cocos\2d\..\..\external\glfw3\include\win32" /I"C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _USING_V110_SDK71_ /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4251 /analyze- /errorReport:prompt ..\win32\MciPlayer.cpp ..\win32\SimpleAudioEngine.cpp
          MciPlayer.cpp
          SimpleAudioEngine.cpp
-     1>c:\cocos2d-x\project\mygame\cocos2d\cocos\base\ccutf8.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (..\win32\SimpleAudioEngine.cpp)
-     1>c:\cocos2d-x\project\mygame\cocos2d\cocos\base\ccutils.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (..\win32\SimpleAudioEngine.cpp)
-     1>c:\cocos2d-x\project\mygame\cocos2d\cocos\2d\cclabel.h(276): warning C4244: 'return' : 'float' から 'int' への変換です。データが失われる可能性があります。 (..\win32\SimpleAudioEngine.cpp)
-     1>c:\cocos2d-x\project\mygame\cocos2d\cocos\platform\ccsaxparser.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (..\win32\SimpleAudioEngine.cpp)
+     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\cocos\base\ccutf8.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (..\win32\SimpleAudioEngine.cpp)
+     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\cocos\base\ccutils.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (..\win32\SimpleAudioEngine.cpp)
+     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\cocos\2d\cclabel.h(276): warning C4244: 'return' : 'float' から 'int' への変換です。データが失われる可能性があります。 (..\win32\SimpleAudioEngine.cpp)
+     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\cocos\platform\ccsaxparser.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。 (..\win32\SimpleAudioEngine.cpp)
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\libAudio.lib" /NOLOGO Debug.win32\MciPlayer.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\libAudio.lib" /NOLOGO Debug.win32\MciPlayer.obj
          Debug.win32\SimpleAudioEngine.obj
-         CocosDenshion.vcxproj -> C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\libAudio.lib
-     1>プロジェクト "C:\cocos2d-x\Project\MyGame\cocos2d\cocos\audio\proj.win32\CocosDenshion.vcxproj" (Rebuild ターゲット) のビルドが完了しました。
+         CocosDenshion.vcxproj -> C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\libAudio.lib
+     1>プロジェクト "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\cocos\audio\proj.win32\CocosDenshion.vcxproj" (Rebuild ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:30.01
+経過時間 00:00:26.30

@@ -14,11 +14,10 @@ Scene* HelloWorld::createScene()
     scene->addChild(layer);
 
 	// 重力の設定.
-	auto world = scene->getPhysicsWorld();
+	layer->world = scene->getPhysicsWorld();
 	Vect gravity;
 	gravity.setPoint(0.0f, -1500.0f);
-	world->setGravity(gravity);
-
+	layer->world->setGravity(gravity);
 
     // return the scene
     return scene;
@@ -34,34 +33,50 @@ bool HelloWorld::init()
         return false;
     }
 
-    
+	//world = Director::getInstance()->getRunningScene()->getPhysicsWorld();
+
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
 
 	// 地面の描画.
-	auto backgroundSprite = Sprite::create("Texture/Background.png");
-	auto backgroundSize = backgroundSprite->getContentSize();
-	backgroundSprite->setPosition(Vec2(visibleSize.width / 2 + origin.x, backgroundSize.height / 2.0f));
-	this->addChild(backgroundSprite, 0);
+	floor = Sprite::create("Texture/Background.png");
+	auto backgroundSize = floor->getContentSize();
+	floor->setPosition(Vec2(visibleSize.width / 2 + origin.x, backgroundSize.height / 2.0f));
+	this->addChild(floor, 0);
 
 	// 地面の物理設定.
-	auto backgroundPhysicsBody = PhysicsBody::createBox(backgroundSize);
-	backgroundPhysicsBody->setDynamic(false);
-	backgroundSprite->setPhysicsBody(backgroundPhysicsBody);
+	auto floorPhysicsBody = PhysicsBody::createBox(backgroundSize);
+	floorPhysicsBody->setDynamic(false);
+	floorPhysicsBody->setCollisionBitmask(0xFFFFFFFF);
+	auto dummyPhysicsBody = PhysicsBody::createBox(Size(0, 0));
+	dummyPhysicsBody->setPositionOffset(floor->getPosition());
+	dummyPhysicsBody->setDynamic(false);
+	//auto joint = PhysicsJointDistance::construct(floorPhysicsBody, dummyPhysicsBody, floor->getPosition(), Vec2(0, 10));
+	auto pin = PhysicsJointPin::construct(floorPhysicsBody, dummyPhysicsBody, Vec2(0, 0));
+	pin->setCollisionEnable(false);
+	floor->setPhysicsBody(floorPhysicsBody);
 
-	// ボールの描画.
-	ball = Sprite::create("Texture/Ball.png");
-	ball->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2.0f));
+	for (int i = 0; i < 2; i++)
+	{
+		// ボールの描画.
+		auto ball = Sprite::create("Texture/Ball.png");
+		ballList.push_back(ball);
+		ball->setPosition(Vec2(visibleSize.width / 2 + origin.x + i * 32, visibleSize.height / 2.0f + i * 256));
 
-	// ボールの物理設定.
-	auto ballMaterial = PHYSICSBODY_MATERIAL_DEFAULT;
-	ballMaterial.restitution = 1.5f;
-	auto ballPhysicsBody = PhysicsBody::createCircle(ball->getContentSize().width / 2.0f,ballMaterial);
-	ballPhysicsBody->setMass(10.0f);
-	ball->setPhysicsBody(ballPhysicsBody);
+		// ボールの物理設定.
+		auto ballMaterial = PHYSICSBODY_MATERIAL_DEFAULT;
+		ballMaterial.restitution = 1.5f;
+		ballMaterial.friction = 0.8f;
+		auto ballPhysicsBody = PhysicsBody::createCircle(ball->getContentSize().width / 2.0f, ballMaterial);
+		ballPhysicsBody->setMass(10.0f);
+		ballPhysicsBody->setCollisionBitmask(i*2+1);
+		CCLog("%x", ballPhysicsBody->getCollisionBitmask());
+		ball->setPhysicsBody(ballPhysicsBody);
 
-	this->addChild(ball, 1);
+		this->addChild(ball, 1);
+	}
 	
+
 	//closeItem = MenuItemImage::create(
 	//	"CloseNormal.png",
 	//	"CloseSelected.png",
@@ -81,14 +96,11 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    auto label = LabelTTF::create("Hello World", "Arial", 24);
-    
-    // position the label on the center of the screen
-    label->setPosition(Vec2(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - label->getContentSize().height));
-
-    // add the label as a child to this layer
-    this->addChild(label, 1);
+	// スコアラベルの初期化.
+    scoreLabel = LabelTTF::create("Hello World", "Arial", 24);
+	scoreLabel->setPosition(Vec2(origin.x + visibleSize.width / 2,
+                            origin.y + visibleSize.height - scoreLabel->getContentSize().height));
+	this->addChild(scoreLabel, 1);
 
     //// add "HelloWorld" splash screen"
     //auto sprite = Sprite::create("HelloWorld.png");
@@ -101,6 +113,10 @@ bool HelloWorld::init()
 
 	this->setTouchMode(kCCTouchesOneByOne);
 	this->setTouchEnabled(true);
+
+	//auto listner = EventListenerPhysicsContact::create();
+	//listner->onContactBegin = CC_CALLBACK_2(HelloWorld::onContactBegan, this);
+
     
     return true;
 }
@@ -123,15 +139,27 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 bool HelloWorld::onTouchBegan(Touch* touch, Event* unused_event)
 {
 	// ボールをタッチしたか？.
-	auto ballPos = ball->getPosition();
-	auto ballRadius = ball->getContentSize().width / 2.0f;
-
-	auto location = touch->getLocation();
-
-	if (ballPos.getDistance(location) <= ballRadius)
+	for (std::vector<Sprite*>::iterator i = ballList.begin(); i != ballList.end(); ++i)
 	{
-		ball->getPhysicsBody()->applyImpulse(Vec2(0.0f, -3000.0f));
+		auto ballPos = (*i)->getPosition();
+		auto ballRadius = (*i)->getContentSize().width / 2.0f;
+		auto location = touch->getLocation();
+
+		if (ballPos.getDistance(location) <= ballRadius)
+		{
+			(*i)->getPhysicsBody()->applyImpulse(Vec2(0.0f, -3000.0f));
+		}
 	}
 
+
+
+	floor->getPhysicsBody()->applyTorque(100);
+
+	return true;
+}
+
+bool HelloWorld::onContactBegin(PhysicsContact& contact)
+{
+	CCLog("Physics Began!");
 	return true;
 }
