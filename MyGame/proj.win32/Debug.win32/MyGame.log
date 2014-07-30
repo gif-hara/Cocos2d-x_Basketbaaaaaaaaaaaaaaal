@@ -1,0 +1,39 @@
+﻿2014/07/30 23:53:54 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\cocos2d-x\Project\MyGame\proj.win32\MyGame.vcxproj" (Build ターゲット)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\cocos\audio\include" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\external" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\external\chipmunk\include\chipmunk" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\extensions" /I..\Classes /I.. /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\cocos" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\cocos\platform\win32" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\cocos\platform\desktop" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\external\glfw3\include\win32" /I"C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\HelloWorldScene.cpp
+         HelloWorldScene.cpp
+     1>c:\cocos2d-x\project\mygame\cocos2d\cocos\base\ccutf8.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+     1>c:\cocos2d-x\project\mygame\cocos2d\cocos\base\ccutils.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+     1>c:\cocos2d-x\project\mygame\cocos2d\cocos\platform\ccsaxparser.h : warning C4819: ファイルは、現在のコード ページ (932) で表示できない文字を含んでいます。データの損失を防ぐために、ファイルを Unicode 形式で保存してください。
+     1>c:\cocos2d-x\project\mygame\classes\helloworldscene.cpp(84): warning C4996: 'cocos2d::LabelTTF::create': が古い形式として宣言されました。
+                 c:\cocos2d-x\project\mygame\cocos2d\cocos\2d\cclabelttf.h(75) : 'cocos2d::LabelTTF::create' の宣言を確認してください。
+     1>c:\cocos2d-x\project\mygame\classes\helloworldscene.cpp(88): warning C4996: 'cocos2d::LabelTTF::getContentSize': が古い形式として宣言されました。
+                 c:\cocos2d-x\project\mygame\cocos2d\cocos\2d\cclabelttf.h(154) : 'cocos2d::LabelTTF::getContentSize' の宣言を確認してください。
+                 c:\cocos2d-x\project\mygame\cocos2d\cocos\2d\cclabelttf.h(154) : 'cocos2d::LabelTTF::getContentSize' の宣言を確認してください。
+     1>c:\cocos2d-x\project\mygame\classes\helloworldscene.cpp(102): warning C4996: 'cocos2d::Layer::setTouchMode': が古い形式として宣言されました。
+                 c:\cocos2d-x\project\mygame\cocos2d\cocos\2d\cclayer.h(123) : 'cocos2d::Layer::setTouchMode' の宣言を確認してください。
+                 c:\cocos2d-x\project\mygame\cocos2d\cocos\2d\cclayer.h(123) : 'cocos2d::Layer::setTouchMode' の宣言を確認してください。
+     1>c:\cocos2d-x\project\mygame\classes\helloworldscene.cpp(102): warning C4996: 'cocos2d::kCCTouchesOneByOne': が古い形式として宣言されました。
+                 c:\cocos2d-x\project\mygame\cocos2d\cocos\deprecated\ccdeprecated.h(912) : 'cocos2d::kCCTouchesOneByOne' の宣言を確認してください。
+     1>c:\cocos2d-x\project\mygame\classes\helloworldscene.cpp(103): warning C4996: 'cocos2d::Layer::setTouchEnabled': が古い形式として宣言されました。
+                 c:\cocos2d-x\project\mygame\cocos2d\cocos\2d\cclayer.h(121) : 'cocos2d::Layer::setTouchEnabled' の宣言を確認してください。
+       PreLinkEvent:
+         if not exist "C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\" mkdir "C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\"
+         xcopy /Y /Q "C:\cocos2d-x\Project\MyGame\cocos2d\cocos\2d\..\..\external\websockets\prebuilt\win32\*.*" "C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\"
+         :VCEnd
+         2 個のファイルをコピーしました
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\MyGame.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\\" /LIBPATH:"C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\\" opengl32.lib glew32.lib libzlib.lib libpng.lib libjpeg.lib libtiff.lib libwebp.lib libiconv.lib glfw3.lib freetype250.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\MyGame.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\MyGame.lib" /MACHINE:X86 /SAFESEH Debug.win32\game.res
+         Debug.win32\AppDelegate.obj
+         Debug.win32\HelloWorldScene.obj
+         Debug.win32\main.obj
+         "C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\libcocos2d.lib"
+         "C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\libAudio.lib"
+         "C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\libchipmunk.lib"
+         MyGame.vcxproj -> C:\cocos2d-x\Project\MyGame\proj.win32\Debug.win32\MyGame.exe
+     1>プロジェクト "C:\cocos2d-x\Project\MyGame\proj.win32\MyGame.vcxproj" (Build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+
+経過時間 00:00:02.34
