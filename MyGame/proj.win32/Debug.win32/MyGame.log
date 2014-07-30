@@ -1,4 +1,4 @@
-﻿2014/07/31 1:31:55 にビルドを開始しました。
+﻿2014/07/31 2:04:42 にビルドを開始しました。
      1>ノード 2 上のプロジェクト "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\MyGame.vcxproj" (Build ターゲット)。
      1>PreLinkEvent:
          if not exist "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\" mkdir "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\"
@@ -13,7 +13,6 @@
          "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\libcocos2d.lib"
          "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\libAudio.lib"
          "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\libchipmunk.lib"
-         LINK : 前回のインクリメンタル リンクで C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\MyGame.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
      1>AppDelegate.obj : warning LNK4075: /EDITANDCONTINUE は /SAFESEH の指定によって無視されます。
      1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'libcmt.lib' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
      1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'libcmtd.lib' は他のライブラリの使用と競合しています。/NODEFAULTLIB:library を使用してください。
@@ -67,4 +66,4 @@
 
 ビルドに成功しました。
 
-経過時間 00:00:02.69
+経過時間 00:00:02.72

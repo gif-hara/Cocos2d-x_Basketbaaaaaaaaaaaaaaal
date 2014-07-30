@@ -1,96 +1,6 @@
-﻿2014/07/31 0:41:47 にビルドを開始しました。
-     1>ノード 3 上のプロジェクト "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\external\chipmunk\proj.win32\chipmunk.vcxproj" (Rebuild ターゲット)。
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\include" /I..\include\chipmunk /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _DEBUG /D _LIB /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4068 /wd4996 /analyze- /errorReport:prompt ..\src\chipmunk.c ..\src\cpArbiter.c ..\src\cpArray.c ..\src\cpBB.c ..\src\cpBBTree.c ..\src\cpBody.c ..\src\cpCollision.c ..\src\cpHashSet.c ..\src\cpPolyShape.c ..\src\cpShape.c ..\src\cpSpace.c ..\src\cpSpaceComponent.c ..\src\cpSpaceHash.c ..\src\cpSpaceQuery.c ..\src\cpSpaceStep.c ..\src\cpSpatialIndex.c ..\src\cpSweep1D.c ..\src\cpVect.c ..\src\constraints\cpConstraint.c ..\src\constraints\cpDampedRotarySpring.c ..\src\constraints\cpDampedSpring.c ..\src\constraints\cpGearJoint.c ..\src\constraints\cpGrooveJoint.c ..\src\constraints\cpPinJoint.c ..\src\constraints\cpPivotJoint.c ..\src\constraints\cpRatchetJoint.c ..\src\constraints\cpRotaryLimitJoint.c ..\src\constraints\cpSimpleMotor.c ..\src\constraints\cpSlideJoint.c
-         chipmunk.c
-         cpArbiter.c
-         cpArray.c
-         cpBB.c
-         cpBBTree.c
-         cpBody.c
-         cpCollision.c
-         cpHashSet.c
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpBody.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpBody.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpBB.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpBB.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpArbiter.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpArbiter.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpArray.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpArray.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpHashSet.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpHashSet.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\chipmunk.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\chipmunk.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpCollision.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpCollision.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpBBTree.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpBBTree.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\src\cpcollision.c(75): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。
-         cpPolyShape.c
-         cpShape.c
-         cpSpace.c
-         cpSpaceComponent.c
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpPolyShape.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpPolyShape.c)
-         cpSpaceHash.c
-         cpSpaceQuery.c
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpShape.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpShape.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpaceComponent.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpaceComponent.c)
-         cpSpaceStep.c
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpaceHash.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpaceHash.c)
-         cpSpatialIndex.c
-         cpSweep1D.c
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpace.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpace.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpaceStep.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpaceStep.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpatialIndex.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpatialIndex.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpaceQuery.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSpaceQuery.c)
-         cpVect.c
-         cpConstraint.c
-         cpDampedRotarySpring.c
-         cpDampedSpring.c
-         cpGearJoint.c
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpVect.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpVect.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpDampedRotarySpring.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpDampedRotarySpring.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpGearJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpGearJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpDampedSpring.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpDampedSpring.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpConstraint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpConstraint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSweep1D.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\cpSweep1D.c)
-         cpGrooveJoint.c
-         cpPinJoint.c
-         cpPivotJoint.c
-         cpRatchetJoint.c
-         cpRotaryLimitJoint.c
-         cpSimpleMotor.c
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpPivotJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpPivotJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpRatchetJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpRatchetJoint.c)
-         cpSlideJoint.c
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpSimpleMotor.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpSimpleMotor.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpRotaryLimitJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpRotaryLimitJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpPinJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpPinJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpGrooveJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpGrooveJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(105): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpSlideJoint.c)
-     1>c:\cocos2d-x\project\cocos2d-x_basketbaaaaaaaaaaaaaaal\mygame\cocos2d\external\chipmunk\include\chipmunk\cpbb.h(111): warning C4056: 浮動小数点数の定数演算でオーバーフローしました。 (..\src\constraints\cpSlideJoint.c)
-       Lib:
+﻿2014/07/31 2:02:14 にビルドを開始しました。
+     1>ノード 2 上のプロジェクト "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\external\chipmunk\proj.win32\chipmunk.vcxproj" (Build ターゲット)。
+     1>Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\Lib.exe /OUT:"C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\libchipmunk.lib" /NOLOGO Debug.win32\chipmunk.obj
          Debug.win32\cpArbiter.obj
          Debug.win32\cpArray.obj
@@ -121,8 +31,8 @@
          Debug.win32\cpSimpleMotor.obj
          Debug.win32\cpSlideJoint.obj
          chipmunk.vcxproj -> C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\proj.win32\Debug.win32\libchipmunk.lib
-     1>プロジェクト "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\external\chipmunk\proj.win32\chipmunk.vcxproj" (Rebuild ターゲット) のビルドが完了しました。
+     1>プロジェクト "C:\cocos2d-x\Project\Cocos2d-x_Basketbaaaaaaaaaaaaaaal\MyGame\cocos2d\external\chipmunk\proj.win32\chipmunk.vcxproj" (Build ターゲット) のビルドが完了しました。
 
 ビルドに成功しました。
 
-経過時間 00:00:16.01
+経過時間 00:00:00.65

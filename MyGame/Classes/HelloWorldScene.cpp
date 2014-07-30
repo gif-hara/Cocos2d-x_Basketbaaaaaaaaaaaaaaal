@@ -48,6 +48,7 @@ bool HelloWorld::init()
 	auto floorPhysicsBody = PhysicsBody::createBox(backgroundSize);
 	floorPhysicsBody->setDynamic(false);
 	floorPhysicsBody->setCollisionBitmask(0xFFFFFFFF);
+	floorPhysicsBody->setCategoryBitmask(0xFFFFFFFF);
 	auto dummyPhysicsBody = PhysicsBody::createBox(Size(0, 0));
 	dummyPhysicsBody->setPositionOffset(floor->getPosition());
 	dummyPhysicsBody->setDynamic(false);
@@ -69,11 +70,12 @@ bool HelloWorld::init()
 		ballMaterial.friction = 0.8f;
 		auto ballPhysicsBody = PhysicsBody::createCircle(ball->getContentSize().width / 2.0f, ballMaterial);
 		ballPhysicsBody->setMass(10.0f);
-		ballPhysicsBody->setCollisionBitmask(i*2+1);
+		ballPhysicsBody->setCollisionBitmask((1 << (i+1)));
+		ballPhysicsBody->setCategoryBitmask(i+1);
 		CCLog("%x", ballPhysicsBody->getCollisionBitmask());
 		ball->setPhysicsBody(ballPhysicsBody);
 
-		this->addChild(ball, 1);
+		this->addChild(ball, -i);
 	}
 	
 
@@ -148,6 +150,7 @@ bool HelloWorld::onTouchBegan(Touch* touch, Event* unused_event)
 		if (ballPos.getDistance(location) <= ballRadius)
 		{
 			(*i)->getPhysicsBody()->applyImpulse(Vec2(0.0f, -3000.0f));
+			break;
 		}
 	}
 
