@@ -11,6 +11,8 @@ public:
 
 	// Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
 	virtual bool init();
+    
+    void onEnter();
 
 	// a selector callback
 	void menuCloseCallback(cocos2d::Ref* pSender);
@@ -26,13 +28,13 @@ private:
 
 	cocos2d::PhysicsWorld* world;
 
-	// ’n–ÊƒIƒuƒWƒFƒNƒg.
+	// åœ°é¢ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ.
 	cocos2d::Sprite* floor;
 
-	// ƒ{[ƒ‹ƒIƒuƒWƒFƒNƒg.
+	// ãƒœãƒ¼ãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ.
 	std::vector<cocos2d::Sprite*> ballList;
 
-	// ƒXƒRƒAƒ‰ƒxƒ‹.
+	// ã‚¹ã‚³ã‚¢ãƒ©ãƒ™ãƒ«.
 	cocos2d::LabelTTF* scoreLabel;
 };
 #endif // __HELLOWORLD_SCENE_H__

@@ -12,13 +12,62 @@ Scene* HelloWorld::createScene()
 
     // add layer as a child to scene
     scene->addChild(layer);
-
-	// d—Í‚Ìİ’è.
+    
+	// é‡åŠ›ã®è¨­å®š.
 	layer->world = scene->getPhysicsWorld();
 	Vect gravity;
 	gravity.setPoint(0.0f, -1500.0f);
 	layer->world->setGravity(gravity);
+    //    layer->world
 
+    Size visibleSize = Director::getInstance()->getVisibleSize();
+    Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
+	// åœ°é¢ã®æç”».
+    auto floor = Sprite::create("Texture/Background.png");
+	auto backgroundSize = floor->getContentSize();
+	floor->setPosition(Vec2(visibleSize.width / 2 + origin.x, backgroundSize.height / 2.0f));
+	layer->addChild(floor, 0);
+    
+	// åœ°é¢ã®ç‰©ç†è¨­å®š.
+	auto floorPhysicsBody = PhysicsBody::createBox(backgroundSize);
+	floorPhysicsBody->setDynamic(false);
+	floorPhysicsBody->setCategoryBitmask(1);
+	auto dummyPhysicsBody = PhysicsBody::createBox(Size(0, 0));
+	dummyPhysicsBody->setPositionOffset(floor->getPosition());
+	dummyPhysicsBody->setDynamic(false);
+	//auto joint = PhysicsJointDistance::construct(floorPhysicsBody, dummyPhysicsBody, floor->getPosition(), Vec2(0, 10));
+	auto pin = PhysicsJointPin::construct(floorPhysicsBody, dummyPhysicsBody, Vec2(0, 90));
+	pin->setCollisionEnable(false);
+	floor->setPhysicsBody(floorPhysicsBody);
+    
+    layer->floor = floor;
+    
+    //scene->getPhysicsWorld()->addJoint(pin);
+    
+	for (int i = 0; i < 2; i++)
+	{
+		// ãƒœãƒ¼ãƒ«ã®æç”».
+		auto ball = Sprite::create("Texture/Ball.png");
+		layer->ballList.push_back(ball);
+		ball->setPosition(Vec2(visibleSize.width / 2 + origin.x + i * 32, visibleSize.height / 2.0f + i * 256));
+        
+		// ãƒœãƒ¼ãƒ«ã®ç‰©ç†è¨­å®š.
+		auto ballMaterial = PHYSICSBODY_MATERIAL_DEFAULT;
+		ballMaterial.restitution = 1.5f;
+		ballMaterial.friction = 0.8f;
+		auto ballPhysicsBody = PhysicsBody::createCircle(ball->getContentSize().width / 2.0f, ballMaterial);
+		ballPhysicsBody->setMass(10.0f);
+		ballPhysicsBody->setCollisionBitmask(1);
+		ballPhysicsBody->setCategoryBitmask(2);
+		ball->setPhysicsBody(ballPhysicsBody);
+        
+		layer->addChild(ball, -i);
+	}
+    
+	layer->setTouchMode(kCCTouchesOneByOne);
+	layer->setTouchEnabled(true);
+    
     // return the scene
     return scene;
 }
@@ -33,50 +82,6 @@ bool HelloWorld::init()
         return false;
     }
 
-	//world = Director::getInstance()->getRunningScene()->getPhysicsWorld();
-
-    Size visibleSize = Director::getInstance()->getVisibleSize();
-    Vec2 origin = Director::getInstance()->getVisibleOrigin();
-
-	// ’n–Ê‚Ì•`‰æ.
-	floor = Sprite::create("Texture/Background.png");
-	auto backgroundSize = floor->getContentSize();
-	floor->setPosition(Vec2(visibleSize.width / 2 + origin.x, backgroundSize.height / 2.0f));
-	this->addChild(floor, 0);
-
-	// ’n–Ê‚Ì•¨—İ’è.
-	auto floorPhysicsBody = PhysicsBody::createBox(backgroundSize);
-	floorPhysicsBody->setDynamic(false);
-	floorPhysicsBody->setCollisionBitmask(0xFFFFFFFF);
-	floorPhysicsBody->setCategoryBitmask(0xFFFFFFFF);
-	auto dummyPhysicsBody = PhysicsBody::createBox(Size(0, 0));
-	dummyPhysicsBody->setPositionOffset(floor->getPosition());
-	dummyPhysicsBody->setDynamic(false);
-	//auto joint = PhysicsJointDistance::construct(floorPhysicsBody, dummyPhysicsBody, floor->getPosition(), Vec2(0, 10));
-	auto pin = PhysicsJointPin::construct(floorPhysicsBody, dummyPhysicsBody, Vec2(0, 0));
-	pin->setCollisionEnable(false);
-	floor->setPhysicsBody(floorPhysicsBody);
-
-	for (int i = 0; i < 2; i++)
-	{
-		// ƒ{[ƒ‹‚Ì•`‰æ.
-		auto ball = Sprite::create("Texture/Ball.png");
-		ballList.push_back(ball);
-		ball->setPosition(Vec2(visibleSize.width / 2 + origin.x + i * 32, visibleSize.height / 2.0f + i * 256));
-
-		// ƒ{[ƒ‹‚Ì•¨—İ’è.
-		auto ballMaterial = PHYSICSBODY_MATERIAL_DEFAULT;
-		ballMaterial.restitution = 1.5f;
-		ballMaterial.friction = 0.8f;
-		auto ballPhysicsBody = PhysicsBody::createCircle(ball->getContentSize().width / 2.0f, ballMaterial);
-		ballPhysicsBody->setMass(10.0f);
-		ballPhysicsBody->setCollisionBitmask((1 << (i+1)));
-		ballPhysicsBody->setCategoryBitmask(i+1);
-		CCLog("%x", ballPhysicsBody->getCollisionBitmask());
-		ball->setPhysicsBody(ballPhysicsBody);
-
-		this->addChild(ball, -i);
-	}
 	
 
 	//closeItem = MenuItemImage::create(
@@ -98,11 +103,6 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-	// ƒXƒRƒAƒ‰ƒxƒ‹‚Ì‰Šú‰».
-    scoreLabel = LabelTTF::create("Hello World", "Arial", 24);
-	scoreLabel->setPosition(Vec2(origin.x + visibleSize.width / 2,
-                            origin.y + visibleSize.height - scoreLabel->getContentSize().height));
-	this->addChild(scoreLabel, 1);
 
     //// add "HelloWorld" splash screen"
     //auto sprite = Sprite::create("HelloWorld.png");
@@ -113,9 +113,6 @@ bool HelloWorld::init()
     // add the sprite as a child to this layer
     //this->addChild(sprite, 0);
 
-	this->setTouchMode(kCCTouchesOneByOne);
-	this->setTouchEnabled(true);
-
 	//auto listner = EventListenerPhysicsContact::create();
 	//listner->onContactBegin = CC_CALLBACK_2(HelloWorld::onContactBegan, this);
 
@@ -123,6 +120,20 @@ bool HelloWorld::init()
     return true;
 }
 
+void HelloWorld::onEnter()
+{
+    this->Scene::onEnter();
+	//world = Director::getInstance()->getRunningScene()->getPhysicsWorld();
+    
+  
+   
+    
+    // ã‚¹ã‚³ã‚¢ãƒ©ãƒ™ãƒ«ã®åˆæœŸåŒ–.
+//    scoreLabel = LabelTTF::create("Hello World", "Arial", 24);
+//    scoreLabel->setPosition(Vec2(origin.x + visibleSize.width / 2,
+//                                 origin.y + visibleSize.height - scoreLabel->getContentSize().height));
+//	this->addChild(scoreLabel, 1);
+}
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
@@ -140,7 +151,7 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 
 bool HelloWorld::onTouchBegan(Touch* touch, Event* unused_event)
 {
-	// ƒ{[ƒ‹‚ğƒ^ƒbƒ`‚µ‚½‚©H.
+	// ãƒœãƒ¼ãƒ«ã‚’ã‚¿ãƒƒãƒã—ãŸã‹ï¼Ÿ.
 	for (std::vector<Sprite*>::iterator i = ballList.begin(); i != ballList.end(); ++i)
 	{
 		auto ballPos = (*i)->getPosition();
@@ -154,7 +165,7 @@ bool HelloWorld::onTouchBegan(Touch* touch, Event* unused_event)
 		}
 	}
 
-
+    CCLOG("Touch Began!");
 
 	floor->getPhysicsBody()->applyTorque(100);
 
